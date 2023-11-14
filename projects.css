@@ -45,6 +45,9 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: 0.3s;
   }
+.card a{
+    color: black;
+}
   .viewbtn{
     padding: 10px 20px;
     border: 2px solid black;
