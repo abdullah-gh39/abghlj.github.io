@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevPro - Home</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- show update script -->
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">abg<span>hlj</span></a>
+            <ul class="links">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="lang">
+                <li><a href="#" id="ar-lang-btn" title="أنقر هنا للغة العربية">عربي</a></li>
+            </ul>
+            <div class="social-links">
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+            <!-- Menu Button -->
+            <div class="toggle_btn"><i id="btnmenu" class="fa-solid fa-bars"></i></div>
+            <!-- Dropdown menu -->
+            <div class="dropdown_menu">
+                <ul class="links-DMP">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <ul class="langDMP">
+                    <li><a href="#" title="أنقر هنا للغة العربية">عربي</a></li>
+                </ul>
+                <div class="social-linksDMP">
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+ 
+        </nav>
+        <div class="notify-width">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <p>You might face some problems in the website due to small screen.</p>
+        </div>
+
+        <!-- Updates Notify Element -->
+        <div class="updates-ix">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <p>We've just updated the site! <a style="text-decoration: underline;" href="updates.html">See updates</a></p><i id="x" class="fi fi-rr-cross-circle"></i>
+        </div>
+        <style>
+            .updates-ix{
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                padding: 10px;
+                margin-top: 0px;
+                border-top: 1px solid #afafaf93
+            }
+            .updates-ix a{
+                color: orange;
+                transition: 0.3s;
+            }
+            .updates-ix a:hover{
+                color: black;
+            }
+            .updates-ix #x{
+                color: black;
+                cursor: pointer;
+                opacity: 100%;
+                text-align: center;
+                margin-left: 15px;
+                margin-top: 5px;
+                font-size: 15px;
+                float: right;
+                text-align: right;
+                transition: 0.2s;
+            }
+            .updates-ix #x:hover{
+                color: orange;
+            }
+        </style>
+        <script>
+            const closeP = document.querySelector('.updates-ix #x');
+            const updatesIX = document.querySelector('.updates-ix');
+            const herosection = document.querySelector('.hero-sec')
+
+            closeP.addEventListener('click', function() {
+            updatesIX.style.display = 'none';
+            herosection.style.height = `100vh`;
+            });
+        </script>
+
+<!--  -->
+        <div class="notify-menubtn"><i class="fa-solid fa-bars"></i><p>The menu button might not appear, <br>Click here to show menu.</p>
+        </div>
+    </header>
+
+    <div class="hero-sec">
+        <div class="container">
+            <div class="div-text">
+                <h1>Abdallah Alghamdi</h1>
+                    <div class="std-icon">
+                        <i class="fa-solid fa-code"></i><h3>Full-Stack Developer</h3>
+                    </div>
+                <p>Iam a full-stack web developer, I can make front-end and back-end websites! <br> I can develop back-end servers, style front end websites, and more.</p>
+                <a href="#" class="btn" title="Click here to see my own works and projects!">My Works</a>
+            </div>
+            <div class="div-img">
+                <img src="fsd_second-removebg-preview.png" alt="full stack developer icon image">
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer">
+            <p><i class="fa-solid fa-copyright"></i>  2023 Abdullah Alghamdi</p>
+        </div>
+    </footer>
+
+    <!-- Script of dropdown menu -->
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function(){
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+    <script>
+        const toggleBtnA = document.querySelector('.notify-menubtn')
+        const toggleBtnIco = document.querySelector('.notify-menubtn i')
+        const dropDownMen = document.querySelector('.dropdown_menu')
+
+        toggleBtnA.onclick = function(){
+            dropDownMen.classList.toggle('open')
+            const isOpen = dropDownMen.classList.contains('open')
+            toggleBtnIco.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+</html>

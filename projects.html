@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevPro - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">abg<span>hlj</span></a>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="active"><a href="#">Projects</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="lang">
+                <li><a href="#" id="ar-lang-btn" title="أنقر هنا للغة العربية">عربي</a></li>
+            </ul>
+            <div class="social-links">
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+            <!-- Menu Button -->
+            <div class="toggle_btn"><i id="btnmenu" class="fa-solid fa-bars"></i></div>
+            <!-- Dropdown menu -->
+            <div class="dropdown_menu">
+                <ul class="links-DMP">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="active"><a href="#">Projects</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <ul class="langDMP">
+                    <li><a href="#" title="أنقر هنا للغة العربية">عربي</a></li>
+                </ul>
+                <div class="social-linksDMP">
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+ 
+        </nav>
+        <div class="notify-width">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <p>You might face some problems in the website due to small screen.</p>
+        </div>
+        <div class="notify-menubtn"><i class="fa-solid fa-bars"></i><p>The menu button might not appear, <br>Click here to show menu.</p>
+        </div>
+        <div class="updates-ix">
+            <i class="fi fi-rr-clock-three"></i>
+            <p>Last modified: 11/13/2023 9:32PM </p><i id="x" class="fi fi-rr-cross-circle"></i>
+        </div>
+        <style>
+            .updates-ix i{
+                margin-top: 0px;
+                font-size: 20px;
+                margin-right: 0px;
+            }
+            .updates-ix{
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                padding: 10px;
+                margin-top: 0px;
+                border-top: 1px solid #afafaf93
+            }
+            .updates-ix a{
+                color: orange;
+                transition: 0.3s;
+            }
+            .updates-ix a:hover{
+                color: black;
+            }
+            .updates-ix #x{
+                color: black;
+                cursor: pointer;
+                opacity: 100%;
+                text-align: center;
+                margin-left: 15px;
+                margin-top: 5px;
+                font-size: 15px;
+                float: right;
+                text-align: right;
+                transition: 0.2s;
+            }
+            .updates-ix #x:hover{
+                color: orange;
+            }
+        </style>
+        <script>
+            const closeP = document.querySelector('.updates-ix #x');
+            const updatesIX = document.querySelector('.updates-ix');
+            const herosection = document.querySelector('.hero-sec')
+
+            closeP.addEventListener('click', function() {
+            updatesIX.style.display = 'none';
+            herosection.style.height = `100vh`;
+            });
+        </script>
+    </header>
+
+    <!-- Main elements (Middle) -->
+    <section>
+        <div class="hero-secx">
+            <div class="containerx">
+                <div class="card">
+                    <div class="icons"><i class="fa-solid fa-robot"></i></div>
+                    <div class="card-content">
+                    <h3 class="card-title">AI ChatBot</h3>
+                    <h1 class="card-text" style="margin-bottom: 87px;">Artificial intelligence chat bot made using python v3.0, it can communicate with you easily!<br>AI ChatBot can learn from its mistakes using python ai mechanics and json files.</h1>
+                    <div class="viewbtn"><h1>View</h1></div>
+                    </div>
+                </div>  
+                <div class="card">
+                    <div class="icons"><i class="fi fi-rr-users-alt"></i></div>
+                    <div class="card-content">
+                    <h3 class="card-title">Employees Manager</h3>
+                    <h1 class="card-text">Employees manager is a python app you can use through windows, you can add an employee with his/her custom id and search for them through ids, you can also set a job/rank for every employee.</h1>
+                    <div class="viewbtn"><h1>View</h1></div>
+                    </div>
+                </div> 
+                <div class="card">
+                    <div class="icons"><i class="fi fi-rr-face-viewfinder"></i></div>
+                    <div class="card-content">
+                    <h3 class="card-title">Face <br> Detection System</h3>
+                    <h1 class="card-text" style="margin-bottom: 70px;">It's a basic face detection system that detects live people faces and images, you can apply it too on a video (MP4)</h1>
+                    <div class="viewbtn"><h1>View</h1></div>
+                    </div>
+                </div> 
+                <div class="card">
+                    <div class="icons"><i class="fi fi-rr-time-past"></i></div>
+                    <div class="card-content">
+                    <h3 class="card-title">More Projects Soon!</h3>
+                    <h1 class="card-text">Im currently working on some projects using many programming languages, such as: <br>- Python <br>- Java Script <br>- HTML / CSS <br>- C++</h1>
+                    </div>
+                </div>
+            </div>           
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer">
+            <p><i class="fa-solid fa-copyright"></i>  2023 Abdullah Alghamdi</p>
+        </div>
+    </footer>
+    <!-- Script of dropdown menu -->
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function(){
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+    <script>
+        const toggleBtnA = document.querySelector('.notify-menubtn')
+        const toggleBtnIco = document.querySelector('.notify-menubtn i')
+        const dropDownMen = document.querySelector('.dropdown_menu')
+
+        toggleBtnA.onclick = function(){
+            dropDownMen.classList.toggle('open')
+            const isOpen = dropDownMen.classList.contains('open')
+            toggleBtnIco.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+</html>

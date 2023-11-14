@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Source Code Pro', monospace;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #afafaf93;
+    z-index: 100;
+    background-color: white;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+    height: 80px;
+}
+header nav .logo{
+    color: rgb(0, 0, 0);
+    font-size: 2.1em;
+    font: bolder;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 700;
+}
+header nav .logo span{
+    color: rgb(255, 157, 0);
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 500;
+}
+header nav .links{
+    display: flex;
+}
+header nav .links li{
+    position: relative;
+    margin: 0 20px;
+    height: 80px;
+    line-height: 85px;
+}
+header nav .links li::after{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(255, 157, 0);
+    transition: 0.2s;
+}
+header nav .links li:hover::after,
+header nav .links li.active::after{
+    width: 100%;
+}
+
+header nav .links li a{
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+}
+header nav .links li a:active{
+    color: rgb(255, 157, 0);
+    font-weight: 600;
+}
+header nav #ar-lang-btn{
+    color: black;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+header nav .lang li{
+    position: relative;
+    margin: 0 20px;
+    height: 80px;
+    line-height: 85px;
+}
+header nav .lang li::after{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(255, 157, 0);
+    transition: 0.2s;
+}
+header nav .lang li:hover::after{
+    width: 100%;
+}
+header nav .social-links a i{
+    color: rgb(255, 157, 0);
+    font-size: 24px;
+    margin-left: 15px;
+    transition: 0.2s;
+}
+
+header nav .social-links a i:hover{
+    color: rgb(0, 0, 0);
+    scale: (1.1, 1.1);
+}
+
+.hero-sec{
+    height: 140vh;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.hero-sec .container{
+    width: 85%;
+    margin: auto;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.hero-sec .container .div-text{
+    width: 50%;
+}
+.hero-sec .container .div-text h1{
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    margin-bottom:8px;
+}
+
+.hero-sec .container .div-text h3{
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(255, 157, 0);
+    margin-bottom: 23px;
+}
+.std-icon {
+    position: relative;
+    display: flex;
+}
+.std-icon i{
+    margin-right: 10px;
+    margin-top: 9px;
+    margin-left: 2px;
+    font-size: 22px;
+    color: rgb(255, 157, 0);
+}
+
+.hero-sec .container .div-text p{
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    margin: 10px 0 50px;
+    line-height: 1.4;
+}
+
+.hero-sec .container .div-text .btn{
+    color: black;
+    border: 1.7px solid rgb(255, 157, 0);
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 12px 40px;
+    transition: 0.2s;
+}
+.hero-sec .container .div-text .btn:hover{
+    background-color: rgb(255, 157, 0);
+    color: rgb(255, 255, 255);
+}
+.hero-sec .container .div-text .btn:active{
+    padding: 10px 30px;
+}
+
+.hero-sec .container .div-img img{
+    width: 100%;
+}
+.toggle_btn i{
+    display: none;
+    color: rgb(255, 157, 0);
+    font-size: 29px;
+    cursor: pointer;
+}
+/* Dropdown Menu */
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2.8rem;
+    top: 90px;
+    width: 300px;
+    height: 0px;
+    float: right;
+    text-align: center;
+    background-color: rgb(255, 157, 0);
+    backdrop-filter: blur(15px);
+    border-radius: 0px;
+    overflow: hidden;
+    transition: height 0.2s;
+}
+.dropdown_menu.open{
+    height: 550px;
+}
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+}
+/* Lang Button */
+.dropdown_menu .langDMP a{
+    align-self: center;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 1.02rem;
+    background-color: transparent;
+    border-color: white;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 6px 40px;
+    border-radius: 0px;
+    transition: 0.2s ease-in-out;
+    margin-top: 20px;
+    margin-right: 18px;
+}
+.dropdown_menu .langDMP a:hover{
+    background-color: white;
+    color: rgb(255, 157, 0);
+}
+/* drop down menu .links a */
+header nav .links-DMP a{
+    color: white;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+header nav .links-DMP a:hover{
+    color: rgb(239, 236, 236);
+}
+header nav .links-DMP li{
+    position: relative;
+    margin: 0 20px;
+    height: 80px;
+    line-height: 85px;
+}
+header nav .links-DMP li::after{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(255, 250, 241);
+    transition: 0.2s;
+}
+header nav .links-DMP li:hover::after,
+header nav .links-DMP li.active::after{
+    width: 100%;
+}
+/* Responsive Site Section */
+@media(max-width: 980px){
+    header nav .links li a, .social-links, .lang{
+        display: none;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+    .toggle_btn i{
+        display: block;
+    }
+}
+@media(max-width: 590px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
+.notify-width{
+    display: none;
+    justify-content: center;
+    background-color: rgb(255, 157, 0);
+    padding: 5px;
+    margin-top: 2px;
+    transition: height 0.2s ease-in-out;
+    margin-bottom: 0px;
+}
+.notify-width i{
+    margin-top: 12px;
+    padding-right: 10px;
+    color: white;
+}
+.notify-width p{
+    color: white;
+}
+.notify-width:hover{
+    background-color: rgb(0, 0, 0);
+}
+.notify-menubtn{
+    display: none;
+    justify-content: center;
+    background-color: rgb(72, 72, 71);
+    padding: 1px;
+    margin-top: 0px;
+    transition: height 0.2s ease-in-out;
+    margin-bottom: 0px;}
+.notify-menubtn:hover{
+    background-color: gray;
+    cursor: pointer;
+}
+.notify-menubtn i{
+    color: white;
+    margin-top: 12px;
+    padding-right: 10px;
+}
+.notify-menubtn p{
+    text-align: center;
+    color: white;
+}
+@media(max-width: 330px){
+    .notify-menubtn{
+        display: block;
+    }
+}
+@media(max-width: 440px){
+    .notify-width{
+        display: flex;
+    }
+    .hero-sec .container .div-text .btn{
+        padding: 7px 10px;
+    }
+    .hero-sec .container .div-text h1{
+        margin-top: 40px;
+        font-size: 40px;
+    }
+    .hero-sec .container .div-text h3{
+        font-size: 20px;
+    }
+    .hero-sec .container .div-text p{
+        font-size: 12px;
+    }
+    header nav .logo{
+        font-size: 24px;
+    }
+    .hero-sec{
+        height: 200vh;
+    }
+    .container{
+        margin-top: 80px;
+    }
+}
+@media(max-width:700px){
+    .container .div-text h1{
+        margin-top: 250px;
+    }
+}
+@media(max-width: 570px){
+    .container .div-text h1{
+        margin-top: 60px;
+    }
+}
+@media(max-width: 298px){
+    .container{
+        margin-top: 150px;
+    }
+}
+.footer{
+    background-color: rgb(255, 157, 0);
+    padding: 10px;
+    display: block;
+    justify-content: center;
+    text-align:center;
+    padding: 20px;
+}
+.footer i, p{
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+}
+.txt-footer{
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+}
+.txt-footer p{
+    color: rgb(14, 14, 14);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.txt-footer i{
+    color: rgb(0, 0, 0);
+    margin-left: 7px;
+    margin-top: 0px;
+}
+.hero-sec .container-am{
+    width: 85%;
+    margin: auto;
+    justify-content: center;
+    display: block;
+    align-items: center;
+    height: 100%;
+}
+/* About - CSS */
+.hero-sec .div-text #am-txt{
+    margin-top: 140px;
+    color: black;
+    font-size: 3.4rem;
+    margin-left: 20px;
+}
+@media(max-width:400px){
+    .hero-sec .div-text #am-txt{
+        margin-top: 270px;
+    }
+}
+.am-cards .card-1{
+    margin-top: 10px;
+    padding: 1px;
+    background-color: black;
+}
+
+.card p{
+    margin-top: 40px;
+    margin-right: 20px;
+    text-align: left;
+    word-spacing: 4px;
+    color: rgb(0, 0, 0);
+    height: auto;
+    max-height: 400px;
+    overflow-y: auto;
+}
+@media(max-width: 1260px){
+    .card p{
+        margin-top: 50px;
+        margin-right: 20px;
+        text-align: left;
+        font-size:14px;
+        word-spacing: 4px;
+        color: rgb(0, 0, 0);
+    }
+}
+@media(max-height: 580px){
+    .card p{
+        font-size: 12px;
+    }
+    .hero-sec .container .div-img img{
+        width: 80%;
+        margin-top: 60px;
+    }
+
+}
+.button-am{
+    background-color: transparent;
+    align-self: center;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.button-am a{
+    color: black;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-decoration:underline;
+    transition: 0.3s;
+}
+.button-am a:hover{
+    color: rgb(255, 157, 0);
+}
+.button-am a:active{
+    color: rgb(248, 187, 89);
+}
+/* Updates I css */
+.updates-i{
+    display: none;
+}
+/* Projects - CSS */
